@@ -86,3 +86,4 @@ EX:
             });
         }
 ```
+<img src="https://github.com/leandro0404/net-core-refit-client-http/blob/master/img/console.png" width="500">
