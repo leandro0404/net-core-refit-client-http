@@ -4,8 +4,10 @@ Demo para modelo básico do uso da lib Refit  e Refit.HttpClientFactory demonstr
 
 * pacotes usados  { o resto é firula para injeção de dependencias do net core e boas práticas }
 
+```
   <PackageReference Include="Refit" Version="4.7.9" />
   <PackageReference Include="Refit.HttpClientFactory" Version="4.7.9" />
+```
 
 *  entity
 ```
