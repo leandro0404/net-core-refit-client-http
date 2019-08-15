@@ -15,7 +15,7 @@ namespace App.Demo.Client
         static async Task Main(string[] args)
         {
             IServiceCollection services = new ServiceCollection();
-            ConfigureServices(services);
+            services.ConfigureServices();
             var serviceProvider = services.BuildServiceProvider();
 
             var service = serviceProvider.GetService<IPostService>();
@@ -28,7 +28,7 @@ namespace App.Demo.Client
             Print(posts, postById);
         }
 
-        #region Config and Print
+        #region Print
         public static void Print(object posts, object postById)
         {
             Console.ForegroundColor = ConsoleColor.Green;
@@ -41,9 +41,13 @@ namespace App.Demo.Client
             Console.WriteLine(JsonConvert.SerializeObject(postById, Formatting.Indented));
             Console.ReadKey();
         }
+        #endregion
+    }
 
+    public static class ServiceCollectionExtension
+    {
         private const string AppSettingsUrl = "Configuration:URL_API";
-        private static IServiceCollection ConfigureServices(IServiceCollection services)
+        public static IServiceCollection ConfigureServices(this IServiceCollection services)
         {
             //Service
             services.AddTransient<IPostService, PostService>();
@@ -63,6 +67,5 @@ namespace App.Demo.Client
 
             return services;
         }
-        #endregion
     }
 }
