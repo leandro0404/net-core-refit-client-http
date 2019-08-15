@@ -1,8 +1,10 @@
 # net-core-refit-client-http
-Demo para modelo básico do uso da lib Refit  e Refit.HttpClientFactory demonstrando  boas práticas
+Demo para modelo básico do uso da lib Refit 
+e Refit.HttpClientFactory ultilizando boas práticas.
 
 
-* pacotes usados  { o resto é firula para injeção de dependencias do net core e boas práticas }
+* pacotes usados  
+{ o resto é firula para injeção de dependencias do net core e boas práticas }
 
 ```
   <PackageReference Include="Refit" Version="4.7.9" />
@@ -70,7 +72,9 @@ public class PostService : IPostService
     
 ```
 * registre as dependências e seja feliz !!!! 
- Lembrando que você pode registrar vários serviços em endpoints diferentes.
+ Lembrando que você pode registrar 
+ vários serviços em endpoints diferentes.
+
 EX:
 ```
  private static IServiceCollection ConfigureServices( this IServiceCollection services)
