@@ -1,6 +1,6 @@
 # net-core-refit-client-http
 Demo para modelo básico do uso da lib Refit 
-e Refit.HttpClientFactory ultilizando boas práticas.
+e Refit.HttpClientFactory utilizando boas práticas.
 
 
 * pacotes usados  
