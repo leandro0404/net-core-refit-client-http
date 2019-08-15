@@ -6,13 +6,13 @@ e Refit.HttpClientFactory ultilizando boas práticas.
 * pacotes usados  
 { o resto é firula para injeção de dependencias do net core e boas práticas }
 
-```
+```xml
   <PackageReference Include="Refit" Version="4.7.9" />
   <PackageReference Include="Refit.HttpClientFactory" Version="4.7.9" />
 ```
 
 *  entity
-```
+```csharp
  public class Post
     {
         [JsonProperty("id")]
@@ -23,7 +23,7 @@ e Refit.HttpClientFactory ultilizando boas práticas.
     
 ```
 * interface
-```
+```csharp
  public interface IPostService
     {
         [Get("/posts")]
@@ -40,7 +40,7 @@ e Refit.HttpClientFactory ultilizando boas práticas.
 
 ```
 * service
-```
+```csharp
 public class PostService : IPostService
     {
         private readonly IPostService _client;
@@ -76,7 +76,7 @@ public class PostService : IPostService
  vários serviços em endpoints diferentes.
 
 EX:
-```
+```csharp
  private static IServiceCollection ConfigureServices( this IServiceCollection services)
         {
             services.AddTransient<IPostService, PostService>();
