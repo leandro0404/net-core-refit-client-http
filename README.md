@@ -2,6 +2,7 @@
 Demo para modelo básico do uso da lib Refit 
 e Refit.HttpClientFactory utilizando boas práticas.
 
+* o pacote precisa ser referenciado no projeto onde está a interface para que o refit consiga gerar o stub. caso contrario ocorrera erro  de não implementação da interface. (doesn't look like a Refit interface", I expect because it inherits from another interface) 
 
 * pacotes usados  
 { o resto é firula para injeção de dependencias do net core e boas práticas }
