@@ -1,5 +1,4 @@
 ﻿using App.Demo.Client.Interfaces;
-using App.Demo.Client.Service;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Newtonsoft.Json;
@@ -49,8 +48,6 @@ namespace App.Demo.Client
         private const string AppSettingsUrl = "Configuration:URL_API";
         public static IServiceCollection ConfigureServices(this IServiceCollection services)
         {
-            //Service
-            services.AddTransient<IPostService, PostService>();
             // build configuration
             IConfiguration configuration = new ConfigurationBuilder()
             .SetBasePath(Directory.GetCurrentDirectory())
